@@ -1,6 +1,77 @@
-p { 
-    color: red;
-}
 body {
-    background-color: green;
+    background-color: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+.row {
+    gap: 20px;
+}
+
+.col {
+    background-color: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#weekly-tasks label,
+#metric-converter label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+#weekly-tasks input,
+#metric-converter input,
+#metric-converter select {
+    width: 100%;
+    max-width: 320px;
+    padding: 6px 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#goal-btn,
+#convert-btn {
+    display: block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#goal-btn:hover,
+#convert-btn:hover {
+    background-color: #0b5ed7;
+}
+
+#goal-message,
+#conversion-result {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0a58ca;
 }
