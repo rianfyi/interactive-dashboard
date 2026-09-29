@@ -29,9 +29,14 @@ SET result based on conversion type:
 IF result is defined THEN display result rounded to 2 decimal places
 ```
 
+## Magic Eight Ball
+
+Users enter a yes/no question and click the Eight Ball to reveal a random answer. JavaScript checks that a question was entered, selects from eight possible answers, and displays it in the answer circle. The CSS adds a shaking animation while the ball is pressed.
+
 ## TODO: Future Changes
 - [ ] Demonstrate usage of various data structures.
 - [ ] Apply traditional algorithms in practice.
 - [ ] Build a clock to track time down to the second.
 - [x] Add a weekly task goal calculator
 - [x] Add an Imperial/Metric converter
+- [x] Add a Magic Eight Ball game
