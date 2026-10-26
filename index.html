@@ -8,6 +8,7 @@
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script defer src="js/task-manager.js"></script>
     <link rel="stylesheet" href="css/style.css">
 
     <style>
@@ -28,11 +29,9 @@
     <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
 
      <div class="container">
-    <div class="row">
+    <main class="dashboard-grid">
         <!-- Dashboard Content -->
-        <div class="col" id="weekly-tasks">
-            <script defer src="js/task-manager.js"></script>
-
+        <div class="dashboard-card" id="weekly-tasks">
             <form>
                 <label for="name">Name:</label>
                 <input type="text" id="name">
@@ -47,10 +46,36 @@
             </form>
 
             <p id="goal-message"></p>
-<div id="task-list"><h3>Weekly Task List</h3><p>Enter a task below to manage your goals.</p><form><label for="task-name">Enter task:</label><input type="text" id="task-name" name="task"><button type="submit" id="add-task">Add Task</button></form></div>
         </div>
 
-        <div class="col" id="metric-converter">
+        <section class="dashboard-card" id="task-manager" aria-labelledby="task-heading">
+            <h2 id="task-heading">Task Manager</h2>
+            <form id="task-form">
+                <label for="task-name">Task name:</label>
+                <input type="text" id="task-name" name="taskName" required>
+
+                <label for="task-priority">Priority:</label>
+                <select id="task-priority" name="priority">
+                    <option value="High">High</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+
+                <label class="task-check" for="task-important">
+                    <input type="checkbox" id="task-important" name="isImportant">
+                    Important
+                </label>
+                <button type="submit" id="add-task">Add Task</button>
+            </form>
+
+            <div class="task-list-heading">
+                <h3>Your tasks</h3>
+                <button type="button" id="delete-list">Delete List</button>
+            </div>
+            <div id="task-list" aria-live="polite"></div>
+        </section>
+
+        <div class="dashboard-card" id="metric-converter">
             <h2>Imperial/Metric Converter</h2>
             <form id="converter-form">
                 <label for="converter-value">Value:</label>
@@ -76,13 +101,13 @@
             <script defer src="js/metric-converter.js"></script>
         </div>
 
-        <div class="col" id="magic-eight-ball">
+        <div class="dashboard-card" id="magic-eight-ball">
             <script src="js/magic-eight-ball.js" defer></script>
             <link rel="stylesheet" href="css/magic-eight-ball.css">
             <h2 class="heading">Magic Eight Ball</h2>
             <form>
                 <p>Type a yes/no question below, then click on the Eight Ball below to get your answer!</p>
-                <input id="question" name="question" size="80">
+                <input id="question" name="question">
                 <div id="magicEightBall">
                     <div id="circle"></div>
                     <img id="ball" src="img/magic-eight-ball.png"/>
@@ -91,7 +116,7 @@
             </form>
             <br>
         </div>
-    </div>
+    </main>
 </div>
 </body>
 </html>

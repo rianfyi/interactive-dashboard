@@ -7,6 +7,10 @@ Web based dashboard for WEB-115 to experiment and demo various interactive JS fe
 
 The weekly task goal calculator allows users to enter their name, daily task goal, and weekly bonus tasks. It calculates the daily goal across five workdays, adds the bonus tasks, and displays the user's total weekly task goal.
 
+## Task Manager
+
+Add tasks with a name, High/Medium/Low priority, and an optional important flag. Each task can be edited, marked important, completed, or deleted; Delete List clears all tasks. Task state is held in the page and the full task array is logged as JSON after each change. The task section reflows to one, two, or three columns across mobile, tablet, and desktop widths.
+
 ## Imperial/Metric Converter
 
 This application converts between Imperial and Metric length units. Users enter a numeric value, choose a conversion type, and get the result. Supported units are inch, foot, yard, mile, centimeter, meter, and kilometer.

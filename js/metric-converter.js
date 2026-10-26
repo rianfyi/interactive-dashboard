@@ -13,9 +13,8 @@ document.getElementById("convert-btn").addEventListener("click", function (event
         return;
     }
 
-    // get the selected conversion type using getElementsByTagName and selectedIndex
-    let selectList = document.getElementsByTagName("select")[0];
-    let conversion = selectList.options[selectList.selectedIndex].value;
+    // Read the selected conversion type.
+    let conversion = document.getElementById("conversion-type").value;
 
     let result;
     let fromUnit;
